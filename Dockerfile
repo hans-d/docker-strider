@@ -4,7 +4,7 @@ MAINTAINER Hans Donner
 RUN mkdir -p /data
 WORKDIR /data
 
-RUN npm install strider -g
+RUN npm install -g strider strider-docker-build strider-docker-runner
 
 ADD ./launch.sh /launch.sh
 RUN chmod +x /launch.sh
