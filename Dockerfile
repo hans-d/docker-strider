@@ -4,9 +4,7 @@ MAINTAINER Hans Donner
 RUN mkdir -p /data
 WORKDIR /data
 
-RUN git clone -b relative https://github.com/hans-d/strider.git strider-src; \
-    npm install -g strider-src strider-docker-build strider-docker-runner; \
-    rm -rf strider-src
+RUN npm install strider@1.5 strider-docker-build strider-docker-runner
 
 ADD ./launch.sh /launch.sh
 RUN chmod +x /launch.sh
